@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#244e40" />
+    <meta
+      name="description"
+      content="Build useful skills through the things you already do. Explore simple ideas, make connections, and put them into practice."
+    />
+    <title>SELFDEV — Learn through life</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="accessibility.css" />
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <aside class="sidebar">
+      <a href="#today" class="brand" aria-label="SELFDEV home"
+        ><span class="brand-symbol">↗</span> selfdev<span class="brand-dot"
+          >.</span
+        ></a
+      >
+      <p class="sidebar-caption">A LITTLE PRACTICE. A WIDER WORLD.</p>
+      <nav aria-label="Main navigation">
+        <a href="#today" data-nav="today"
+          ><span aria-hidden="true">◒</span> Your space</a
+        >
+        <a href="#ideas" data-nav="ideas"
+          ><span aria-hidden="true">⌘</span> Explore ideas</a
+        >
+        <a href="#saved" data-nav="saved"
+          ><span aria-hidden="true">▤</span> Your practice
+          <span id="saved-count" class="count">0</span></a
+        >
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="little-plant" aria-hidden="true">✳</div>
+        <strong>Progress lives in practice.</strong>
+        <p>You don’t need a new routine.<br />Start with the life you have.</p>
+        <span class="prototype">EARLY PROTOTYPE</span>
+      </div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar">
+        <span>YOUR EVERYDAY LEARNING COMPANION</span
+        ><button class="help-button" id="about-button">
+          How it works <span aria-hidden="true">↗</span>
+        </button>
+      </header>
+      <div id="storage-notice" class="storage-notice" role="status" hidden>
+        Your browser couldn’t save or restore some work. Keep this page open.
+        <button id="download-work">Download my work</button>
+        <button id="retry-storage">Try saving again</button>
+      </div>
+      <noscript
+        ><p class="storage-notice">
+          SELFDEV needs JavaScript for guided practice. Please enable it and
+          reload this page.
+        </p></noscript
+      >
+      <main id="main" tabindex="-1"></main>
+      <footer>
+        Small moments. Useful connections. Lasting skills.<span
+          >Built around your real life.</span
+        >
+      </footer>
+    </div>
+    <dialog id="about" aria-labelledby="about-title">
+      <button class="close" aria-label="Close explanation">×</button
+      ><span class="eyebrow">LEARN THROUGH LIFE</span>
+      <h2 id="about-title">Start with something real.</h2>
+      <p>
+        Bring an activity or a challenge. Explore a useful idea, connect it to
+        your situation, and choose a small step to try.
+      </p>
+      <div class="about-steps">
+        <p><b>01 · Notice</b><br />What’s happening in your situation?</p>
+        <p>
+          <b>02 · Connect</b><br />What can another field help you understand?
+        </p>
+        <p><b>03 · Try</b><br />Use the idea, then reflect on what happened.</p>
+      </div>
+      <p class="muted">
+        This early version offers three guided learning paths. It does not
+        analyse or send your text to an AI service. Drafts and practice notes
+        stay in this browser; avoid sensitive details and download notes you
+        want to keep.
+      </p>
+      <button class="primary close-about">Let’s explore <span>→</span></button>
+    </dialog>
+    <dialog id="replace-draft" aria-labelledby="replace-title">
+      <h2 id="replace-title">Start a different idea?</h2>
+      <p>
+        You have an unfinished practice. You can continue it or replace it with
+        this new idea.
+      </p>
+      <div class="button-row">
+        <button class="secondary" data-close-replace>Keep my practice</button
+        ><button class="primary" id="confirm-replace">Start new idea</button>
+      </div>
+    </dialog>
+    <button id="undo-remove" class="undo-button" hidden>
+      Undo last removal ↶
+    </button>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
